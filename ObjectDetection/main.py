@@ -11,7 +11,7 @@ output_layers = [layer_names[i-1] for i in net.getUnconnectedOutLayers()]
 colors = np.random.uniform(0, 255, size=(len(classes), 3))
 
 # 이미지 가져오기: cat.jpg  raccoon.jpg    Cat_Dog_IMG.jpg  cats_3.jpg
-img = cv2.imread("img/21_4elephant.jpg") #복사한 이미지
+img = cv2.imread("img/25_5backpack.jpg") #복사한 이미지
 if img is None:
     print("이미지 파일을 읽을 수 없습니다.")
     exit()
