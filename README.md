@@ -8,3 +8,7 @@
 
 ## 일정
 
+## 다이어그램
+![image](https://github.com/among5094/Capstone1/assets/106166621/be49a5db-9d63-4809-ac13-570eb44ac0f4)
+
+
