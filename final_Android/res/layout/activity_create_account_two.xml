@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".create_account_two">
+
+    <!--    상단 로고, 텍스트 레이아웃-->
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        >
+        <!--    상단 로고-->
+        <ImageView
+            android:id="@+id/top_logo_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/pet_logo_icon"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitCenter"/>
+        <ImageView
+            android:id="@+id/top_logo"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/pet_logo_text"
+            android:scaleType="fitCenter"/>
+
+    </LinearLayout>
+
+    <!--    상단 회원가입 텍스트-->
+    <TextView
+        android:id="@+id/top_text_create_account_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:text="회원가입"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/top_text_petdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_text_create_account_two"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:text="반려견 정보 입력"
+        android:textSize="18dp" />
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_text_petdata"
+        android:layout_above="@+id/create_account_pet_btn_layout">
+        <LinearLayout
+            android:id="@+id/layout_in_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--    회원가입정보입력(반려견)-->
+            <LinearLayout
+                android:id="@+id/create_account_user_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <!--        반려견 이름-->
+                <TextView
+                    android:id="@+id/create_text_petname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="반려견 이름"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/create_petname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="이름"
+                    android:visibility="visible" />
+
+                <!--        반려견 생년월일-->
+                <TextView
+                    android:id="@+id/create_text_petbirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="반려견 생년월일"
+                    android:visibility="visible" />
+
+
+                <!--        반려견 생년월일 캘린더 레이아웃-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <android.widget.Button
+                        android:id="@+id/datePickerButton"
+                        android:textSize="15dp"
+                        android:layout_width="125dp"
+                        android:layout_height="45dp"
+                        android:onClick="openDatePicker"
+                        android:text="반려견 생년월일"
+                        android:background="@drawable/custom_button"
+                        android:fontFamily="@font/dovemayo_wild"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/calendarlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:focusable="true">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <!--                        <DatePicker-->
+                        <!--                            android:datePickerMode="spinner"-->
+                        <!--                            android:id="@+id/datePicker1"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="match_parent"-->
+                        <!--                            android:layout_gravity="center" />-->
+                        <CalendarView
+                            android:id="@+id/calendar_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:showWeekNumber="false"/>
+
+                    </FrameLayout>
+
+                    <Button
+                        android:id="@+id/calbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="확인" />
+
+                </LinearLayout>
+
+
+                <!--        반려견 성별-->
+                <TextView
+                    android:id="@+id/create_text_petgender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="반려견 성별"
+                    android:visibility="visible" />
+
+                <RadioGroup
+                    android:id="@+id/create_petgender_radiogroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/create_petgender_xy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="수컷" />
+
+                    <RadioButton
+                        android:id="@+id/create_petgender_xx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="암컷" />
+                </RadioGroup>
+
+                <!--        반려견 종-->
+                <FrameLayout
+                    android:id="@+id/create_petspecies_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/create_text_petspecies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="반려견 종"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/create_petspecies_etc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="직접입력"
+                        android:inputType="text"
+                        android:visibility="gone"/>
+                </FrameLayout>
+
+                <Spinner
+                    android:id="@+id/create_spinner_petspecies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:entries="@array/petspecies"
+                    android:spinnerMode="dropdown" />
+
+                <!--        반려견 특이사항-->
+                <TextView
+                    android:id="@+id/create_text_etc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="반려견의 특이사항(질병, 수술유무 등)"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/create_etc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="(선택사항)"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <!--    버튼 레이아웃-->
+    <LinearLayout
+        android:id="@+id/create_account_pet_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--            돌아가기 버튼-->
+        <android.widget.Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="이전으로"
+            android:visibility="visible"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/dovemayo_wild"
+            android:clickable="true"/>
+        <!--            확인 버튼-->
+        <android.widget.Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="    확인    "
+            android:visibility="visible"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/dovemayo_wild"
+            android:clickable="true"/>
+    </LinearLayout>
+
+</RelativeLayout>

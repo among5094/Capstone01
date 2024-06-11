@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainHome">
+
+    <!--    로그인 버튼 눌렀을때 넘어오는 메인홈-->
+
+    <!--    전체 레이아웃-->
+    <LinearLayout
+        android:id="@+id/big_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--    상단 로고, 텍스트 레이아웃-->
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            >
+            <!--    상단 로고-->
+            <ImageView
+                android:id="@+id/top_logo_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/pet_logo_icon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="fitCenter"/>
+            <ImageView
+                android:id="@+id/top_logo"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/pet_logo_text"
+                android:scaleType="fitCenter"/>
+
+        </LinearLayout>
+
+        <!--        피드 레이아웃 새로고침 할 수 있도록 하는 SwipeRefreshLayout-->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <!--    피드 레이아웃(RecyclerView로 대체)-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/post_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/top_layout"
+                android:layout_weight="1" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--    탭 레이아웃-->
+        <LinearLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomnavigationview_home"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="bottom"
+                android:background="#F6F6F6"
+                app:itemActiveIndicatorStyle="@null"
+                app:itemIconTint="@drawable/bottom_navigation_color"
+                app:itemTextColor="@drawable/bottom_navigation_color"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/bottomnavigation_menu" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

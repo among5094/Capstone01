@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--    상단 로고, 텍스트 레이아웃-->
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        >
+        <!--    상단 로고-->
+        <ImageView
+            android:id="@+id/top_logo_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/pet_logo_icon"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitCenter"/>
+        <ImageView
+            android:id="@+id/top_logo"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/pet_logo_text"
+            android:scaleType="fitCenter"/>
+
+    </LinearLayout>
+    <!--    이름-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="이름"
+        android:textSize="20dp"/>
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="name"
+        android:minHeight="48dp"
+        android:padding="8dp"/>
+
+    <!--    닉네임-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="닉네임"
+        android:textSize="20dp"/>
+    <EditText
+        android:id="@+id/edtNickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nickname"
+        android:minHeight="48dp"
+        android:padding="8dp"/>
+
+    <!--    아이디-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="아이디"
+        android:textSize="20dp"/>
+    <EditText
+        android:id="@+id/edtId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="id"
+        android:minHeight="48dp"
+        android:padding="8dp"/>
+
+    <!--    비밀번호-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="비밀번호"
+        android:textSize="20dp"/>
+    <EditText
+        android:id="@+id/edtPw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:minHeight="48dp"
+        android:padding="8dp"/>
+
+    <!--    전화번호-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="전화번호"
+        android:textSize="20dp"/>
+    <EditText
+        android:id="@+id/edtPhoneNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="phonenumber"
+        android:minHeight="48dp"
+        android:padding="8dp"/>
+
+    <!--    버튼-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center" >
+
+
+        <android.widget.Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/dovemayo_wild"
+            android:text="이전으로" />
+
+
+        <android.widget.Button
+            android:id="@+id/changeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/dovemayo_wild"
+            android:text="변경하기"/>
+
+    </LinearLayout>
+
+</LinearLayout>

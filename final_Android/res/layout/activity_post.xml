@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPost"
+    android:background="#ffffff">
+
+    <!--    게시글 등록 페이지-->
+
+    <!--    전체 레이아웃-->
+    <LinearLayout
+        android:id="@+id/big_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--    상단 로고, 텍스트 레이아웃-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#ffffff">
+
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:background="#ffffff" >
+            <!--    상단 로고-->
+            <ImageView
+                android:id="@+id/top_logo_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/pet_logo_icon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="fitCenter"/>
+            <ImageView
+                android:id="@+id/top_logo"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/pet_logo_text"
+                android:scaleType="fitCenter"/>
+            </LinearLayout>
+
+
+            <android.widget.Button
+                android:id="@+id/postup"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/baseline_check_24"
+                android:layout_centerVertical="true" />
+
+
+        </RelativeLayout>
+
+        <!--    피드 레이아웃(미구현)-->
+
+            <LinearLayout
+                android:id="@+id/feed_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFFFF"
+                    android:orientation="vertical" >
+                    <EditText
+                        android:id="@+id/titleEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:gravity="top"
+                        android:background="#FFFFFFFF"
+                        android:hint="제목을 작성하세요."/>
+                    <!--    게시글 내용 입력, 사진 선택 전까지 입력 못함   -->
+                    <EditText
+                        android:id="@+id/postEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:padding="10dp"
+                        android:gravity="top"
+                        android:background="#FFFFFFFF"
+                        android:hint="게시글을 작성하세요."/>
+
+                    <!--    선택한 사진 표시   -->
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+                            <ImageView
+                                android:id="@+id/petimg"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/baseline_add_photo_alternate_24"/>
+                            <ImageView
+                                android:id="@+id/petimg2"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/baseline_add_photo_alternate_24"/>
+
+                            <ImageView
+                                android:id="@+id/petimg3"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/baseline_add_photo_alternate_24" />
+
+                            <ImageView
+                                android:id="@+id/petimg4"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/baseline_add_photo_alternate_24"/>
+                            <ImageView
+                                android:id="@+id/petimg5"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/baseline_add_photo_alternate_24"/>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                    <!--    사진 업로드 버튼   -->
+                    <android.widget.Button
+                        android:id="@+id/imgup"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_button"
+                        android:fontFamily="@font/dovemayo_wild"
+                        android:text="사진 선택"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        <!--    탭 레이아웃-->
+        <LinearLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomnavigationview_post"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="bottom"
+                android:background="#F6F6F6"
+                app:itemActiveIndicatorStyle="@null"
+                app:labelVisibilityMode="labeled"
+                app:itemIconTint="@drawable/bottom_navigation_color"
+                app:itemTextColor="@drawable/bottom_navigation_color"
+                app:menu="@menu/bottomnavigation_menu" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="#ffffff"
+    tools:context=".create_account">
+
+    <!--    상단 로고, 텍스트 레이아웃-->
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        >
+        <!--    상단 로고-->
+        <ImageView
+            android:id="@+id/top_logo_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/pet_logo_icon"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitCenter"/>
+        <ImageView
+            android:id="@+id/top_logo"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/pet_logo_text"
+            android:scaleType="fitCenter"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/top_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_layout"
+        android:orientation="vertical">
+        <!--    상단 회원가입 텍스트-->
+        <TextView
+            android:id="@+id/top_text_create_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_layout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="회원가입"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/top_text_userdata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_text_create_account"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="사용자 정보 입력"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/create_account_user_btn_layout"
+        android:layout_below="@+id/top_text_layout">
+        <!--    회원가입정보입력(유저)-->
+        <LinearLayout
+            android:id="@+id/create_account_user_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_text_layout"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <!--        이름-->
+            <TextView
+                android:id="@+id/create_text_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:text="이름"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/create_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:hint="이름"
+                android:visibility="visible" />
+            <!--        닉네임-->
+            <TextView
+                android:id="@+id/create_text_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="닉네임"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/create_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:hint="닉네임"
+                android:visibility="invisible" />
+            <!--        아이디-->
+            <TextView
+                android:id="@+id/create_text_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="아이디"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/create_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:hint="아이디"
+                android:visibility="invisible" />
+            <!--        비밀번호-->
+            <TextView
+                android:id="@+id/create_text_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="비밀번호"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/create_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:hint="비밀번호"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:visibility="invisible" />
+
+            <!--        비밀번호 확인-->
+            <TextView
+                android:id="@+id/create_text_checkpw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="비밀번호 확인"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/create_checkpw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:hint="비밀번호 확인"
+                    android:inputType="textPassword"
+                    android:visibility="invisible" />
+                <android.widget.Button
+                    android:id="@+id/create_checkpw_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="확인"
+                    android:background="@drawable/custom_button"
+                    android:fontFamily="@font/dovemayo_wild"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <!--            전화번호-->
+            <TextView
+                android:id="@+id/create_text_phonenum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="휴대폰 번호"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/create_phonenum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:hint="-없이 적어주세요"
+                android:inputType="phone"
+                android:visibility="invisible" />
+            <!--            이메일주소-->
+            <TextView
+                android:id="@+id/create_text_eamil_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="이메일 주소"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/create_email_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:hint="이메일 주소"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!--    버튼 레이아웃-->
+    <LinearLayout
+        android:id="@+id/create_account_user_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--            돌아가기 버튼-->
+        <android.widget.Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/dovemayo_wild"
+            android:text="이전으로" />
+        <!--            다음 버튼-->
+        <android.widget.Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/dovemayo_wild"
+            android:text="다음으로" />
+    </LinearLayout>
+
+</RelativeLayout>

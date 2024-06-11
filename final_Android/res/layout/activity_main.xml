@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FFFFFF">
+
+    <!--    전체 레이아웃-->
+    <LinearLayout
+        android:id="@+id/signin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--        이미지 로고-->
+        <ImageView
+            android:id="@+id/top_logo_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/pet_logo"
+            android:scaleType="fitCenter" />
+
+
+        <!--        아이디 입력칸-->
+        <EditText
+            android:id="@+id/edtId"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/baseline_account_box_24"
+            android:drawablePadding="5dp"
+            android:hint="이메일"
+            android:padding="5dp" />
+
+
+        <!--        비밀번호 입력칸-->
+        <EditText
+            android:id="@+id/edtPw"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="5dp"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:padding="5dp" />
+
+        <!--        로그인 버튼-->
+        <android.widget.Button
+            android:id="@+id/btn_login"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/dovemayo_wild"
+            android:text="로그인"
+            android:textSize="17dp" />
+
+        <!--        회원가입 버튼-->
+        <android.widget.Button
+            android:id="@+id/btn_create_account"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/dovemayo_wild"
+            android:text="회원가입"
+            android:textSize="17dp" />
+
+        <!--        회원가입 버튼 텍스트-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="아직 회원이 아니신가요?"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
