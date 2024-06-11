@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/pet_logo_icon_foreground"
+        android:label="Withpet"
+        android:roundIcon="@mipmap/pet_logo_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Withpet_login"
+        tools:targetApi="31">
+        <activity
+            android:name=".withpet_intro"
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".userprofile"
+            android:exported="false" />
+        <activity
+            android:name=".MainHome"
+            android:exported="false" />
+        <activity
+            android:name=".create_account_two"
+            android:exported="false" />
+        <activity
+            android:name=".create_account"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".MainPost"
+            android:exported="false"
+            />
+
+        <activity android:name=".ChangeUserInfo"
+            android:exported="false"/>
+
+
+
+        <activity
+            android:name=".userprofile_image"
+            android:label="Selected Image">
+        </activity>
+    </application>
+
+</manifest>
