@@ -34,11 +34,14 @@ Firebase를 연동해서 데이터베이스를 관리하고 사용자 인증, �
 # 📝 다이어그램
 
 <h3> 패키지 다이어그램</h3>
-![image](https://github.com/among5094/Capstone01/assets/106166621/589a6c3e-e0a6-4f68-bf76-b73150533ad6)
+
+![캡스톤_패키지다이어그램](https://github.com/among5094/Capstone01/assets/106166621/5983262b-a031-4c96-b3a2-c145c7df3417)
+
 
 
 <h3> 클래스 다이어그램</h3>
-![image](https://github.com/among5094/Capstone01/assets/106166621/ffac9c18-e65f-4edb-a7c2-e80d330724c6)
+
+
 
 
 
