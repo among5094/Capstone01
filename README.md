@@ -26,10 +26,11 @@ Firebase를 연동해서 데이터베이스를 관리하고 사용자 인증, �
 - 매주 월요일 5시에 모여서 약 2시간 정도 회의를 진행하였습니다.
 
 
-# 📑 다이어그램
+# 📝 다이어그램
 
 <h3> 패키지 다이어그램</h3>
-<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" />
+![image](https://github.com/among5094/Capstone01/assets/106166621/589a6c3e-e0a6-4f68-bf76-b73150533ad6)
+
 
 <h3> 클래스 다이어그램</h3>
 ![image](https://github.com/among5094/Capstone01/assets/106166621/ffac9c18-e65f-4edb-a7c2-e80d330724c6)
