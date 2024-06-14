@@ -25,6 +25,8 @@ Firebase를 연동해서 데이터베이스를 관리하고 사용자 인증, �
 
 - 4개월 전체적인 개발 일정입니다.
 - 매주 월요일 5시에 모여서 약 2시간 정도 회의를 진행하였습니다.
+  
+<img width="519" alt="image" src="https://github.com/among5094/Capstone01/assets/106166621/a3281e7f-8640-44ab-a04a-56da835b6549">
 
 <br>   
 
